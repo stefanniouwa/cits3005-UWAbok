@@ -1,0 +1,170 @@
+@prefix ns1: <http://example.org/uwabok#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:Assessment a rdfs:Class ;
+    rdfs:subClassOf rdfs:Resource .
+
+ns1:Major a rdfs:Class ;
+    rdfs:subClassOf rdfs:Resource .
+
+ns1:Prerequisite a rdfs:Class ;
+    rdfs:subClassOf rdfs:Resource .
+
+ns1:Unit a rdfs:Class ;
+    rdfs:subClassOf rdfs:Resource .
+
+ns1:CITS1401 a ns1:Unit ;
+    ns1:hasAssessments " final examination",
+        " mid-semester quiz",
+        " projects and labs" ;
+    ns1:hasCreditPoints "6" ;
+    ns1:hasDescription "Computers are everywhere and in nearly everything - the watch you wear, the phone you use, the car you drive, the games you play and, increasingly, in your home. CITS140 I is the first step along your path to being able to use computers to solve problems. Because computers cannot yet work using human languages, computer languages have been devised to allow algorithms encoding solutions to problems to be executed on computers. In this unit you will learn about, and use, the very popular language Python 3. Along the way you will also learn some problem solving techniques and how to create algorithms; you will also learn how computers execute your programs" ;
+    ns1:hasLevel "1" ;
+    ns1:hasOutcomes " apply common approaches to computational problem solving.",
+        " create algorithms using computational thinking to solve a range of problems",
+        " demonstrate the process of computational problem solving",
+        " write programs using Python 3 to implement algorithms" ;
+    ns1:hasPrerequisites "MATH1720",
+        "MATX1720",
+        "Mathematics Applications ATARor MATH1720 Mathematics Fundamentalsor MATX1720 Mathematics Fundamentals or equivalentor  Enrolment in62510 Master of Information Technologyor 62530 Master of Data Science " ;
+    ns1:hasTitle "Computational Thinking with Python" ;
+    ns1:hasUnitCode "CITS1401" .
+
+ns1:CITS2002 a ns1:Unit ;
+    ns1:hasAssessments " final examination",
+        " mid-semester test",
+        " programming" ;
+    ns1:hasCreditPoints "6" ;
+    ns1:hasDescription "Understanding the relationship between a programming language and the contemporary operating systems on which it executes is central to developing many skills in Computer Science. This unit introduces the standard C programming language, on which many other programming languages and systems are based, through a study of core operating system services including input and output, memory management and file systems. The C language is introduced through discussions on basic topics like data types, variables, expressions, control structures, scoping rules, functions and parameter passing. More advanced topics like C's run-time environment, system calls, dynamic memory allocation, pointers and recursion are presented in the context of operating system services related to process execution, memory management and file systems. The importance of process scheduling, memory management and interprocess communication in modern operating systems is discussed in the context of operating system support for multiprogramming. Laboratory and practical class work place a strong focus on the practical application of fundamental programming concepts, with examples designed to compare and contrast many key features of contemporary operating systems." ;
+    ns1:hasLevel "2" ;
+    ns1:hasOutcomes " apply the most appropriate techniques to successfully develop robust systems programs in the C language",
+        " decide when to choose the C programming language and its standard library for their systems programming requirements",
+        " demonstrate an understanding of the relationship between contemporary operating systems, programming languages and systems-level application programming interfaces.",
+        " explain the relationship and interactions between an operating system's critical components and their affect on performance",
+        " explain the role of an operating system in the wider computing context",
+        " identify and appreciate the fundamentals of the imperative programming paradigm, using the standard C programming language as an example" ;
+    ns1:hasPrerequisites "completion of 6 points of programming-based units" ;
+    ns1:hasTitle "Systems Programming" ;
+    ns1:hasUnitCode "CITS2002" .
+
+ns1:CITS3005 a ns1:Unit ;
+    ns1:hasAssessments " final examination",
+        " planning project",
+        " workshops" ;
+    ns1:hasCreditPoints "6" ;
+    ns1:hasDescription "Knowledge Representation will cover tools and methodologies for the formal representation of knowledge in a machine readable format, and automated reasoning technologies. These technologies are important for capturing domain specific details and supporting and automating decision making processes. The course will cover: logical foundations of artificial intelligence, including first order, probabilistic and fuzzy logics; formal representation of knowledge domains, including description logics, ontologies and graphical models; reasoning techniques including logic programming and theorem proving; and applications to planning domains." ;
+    ns1:hasLevel "3" ;
+    ns1:hasOutcomes " describe the theoretical foundation of logic programming.",
+        " design and implement planning systems for a given domain..",
+        " design, verify and implement logic programs.",
+        " formulate complex concepts, rules and arguments in an appropriate logical language.",
+        " select suitable tools and formalisms to capture domain specific knowledge in a machine readable format." ;
+    ns1:hasPrerequisites "CITS2200",
+        "CITS2200 Data Structures and Algorithmsand CITS2211 Discrete Structures",
+        "CITS2211" ;
+    ns1:hasTitle "Knowledge Representation" ;
+    ns1:hasUnitCode "CITS3005" .
+
+ns1:CITS4403 a ns1:Unit ;
+    ns1:hasAssessments " notebook",
+        " project",
+        " two in-class tests " ;
+    ns1:hasCreditPoints "6" ;
+    ns1:hasDescription "This unit explores current research topics in computational modelling. Students develop skills to identify problems, formulate solutions and conduct further research in open questions in this domain." ;
+    ns1:hasLevel "4" ;
+    ns1:hasOutcomes " analyse and discuss current open research topics in the field of computational modelling",
+        " communicate effectively to present computational models to address a given research hypothesis and qualify the limitations of these models",
+        " design, apply and analyse relevant technologies to solve problems in the field of computational modelling.",
+        " explain the concepts and technologies used in the field of computational modelling" ;
+    ns1:hasPrerequisites " Enrolment in  in theHON-CMSSE Computer Science and Software Engineering [Honours]or the 62510 Master of Information Technologyor the 62530 Master of Data Scienceorthe 62550 Master of Professional Engineering and the SP-ESOFT Software Engineering specialisationorthe BH008 Bachelor of Advanced Computer Science [Honours] and MJD-ICYDM International Cybersecurity majoror the MJD-ARIDM Artificial Intelligence majoror73660 Master of Medical Physics" ;
+    ns1:hasTitle "Computational Modelling" ;
+    ns1:hasUnitCode "CITS4403" .
+
+ns1:hasAssessments a rdf:Property ;
+    rdfs:domain ns1:Unit ;
+    rdfs:range ns1:Assessment .
+
+ns1:hasAuditionPrerequisites a rdf:Property .
+
+ns1:hasBridgingCourses a rdf:Property ;
+    rdfs:domain ns1:Major ;
+    rdfs:range xsd:string .
+
+ns1:hasCreditPoints a rdf:Property ;
+    rdfs:domain ns1:Unit ;
+    rdfs:range xsd:integer .
+
+ns1:hasDescription a rdf:Property ;
+    rdfs:domain ns1:Unit ;
+    rdfs:range xsd:string .
+
+ns1:hasEnrollmentPrerequisites a rdf:Property .
+
+ns1:hasExamAssessment a rdf:Property .
+
+ns1:hasLevel a rdf:Property ;
+    rdfs:domain ns1:Unit ;
+    rdfs:range xsd:string .
+
+ns1:hasMajorCode a rdf:Property ;
+    rdfs:domain ns1:Major ;
+    rdfs:range xsd:string .
+
+ns1:hasMajorCourses a rdf:Property ;
+    rdfs:domain ns1:Major ;
+    rdfs:range xsd:string .
+
+ns1:hasMajorDescription a rdf:Property ;
+    rdfs:domain ns1:Major ;
+    rdfs:range xsd:string .
+
+ns1:hasMajorOutcomes a rdf:Property ;
+    rdfs:domain ns1:Major ;
+    rdfs:range xsd:string .
+
+ns1:hasMajorPrerequisites a rdf:Property ;
+    rdfs:domain ns1:Major ;
+    rdfs:range ns1:Prerequisite .
+
+ns1:hasMajorTitle a rdf:Property ;
+    rdfs:domain ns1:Major ;
+    rdfs:range xsd:string .
+
+ns1:hasMajorUnits a rdf:Property ;
+    rdfs:domain ns1:Major ;
+    rdfs:range ns1:Unit .
+
+ns1:hasOtherAssessments a rdf:Property .
+
+ns1:hasOtherPrerequisites a rdf:Property .
+
+ns1:hasOutcomes a rdf:Property ;
+    rdfs:domain ns1:Unit ;
+    rdfs:range xsd:string .
+
+ns1:hasPrerequisiteCnf a rdf:Property .
+
+ns1:hasPrerequisites a rdf:Property ;
+    rdfs:domain ns1:Unit ;
+    rdfs:range ns1:Prerequisite .
+
+ns1:hasPresentationAssessment a rdf:Property .
+
+ns1:hasProjectAssessment a rdf:Property ;
+    rdfs:domain ns1:Assessment ;
+    rdfs:range xsd:string .
+
+ns1:hasReportAssessment a rdf:Property .
+
+ns1:hasSubjectPrerequisites a rdf:Property .
+
+ns1:hasTitle a rdf:Property ;
+    rdfs:domain ns1:Unit ;
+    rdfs:range xsd:string .
+
+ns1:hasUnitCode a rdf:Property ;
+    rdfs:domain ns1:Unit ;
+    rdfs:range xsd:string .
+

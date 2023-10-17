@@ -1,0 +1,145 @@
+{
+  "CITS1401": {
+    "code": "CITS1401",
+    "title": "Computational Thinking with Python",
+    "school": "Physics, Mathematics and Computing",
+    "board_of_examiners": "02 - Information Technology",
+    "delivery_mode": "Face to face",
+    "level": "1",
+    "description": "Computers are everywhere and in nearly everything - the watch you wear, the phone you use, the car you drive, the games you play and, increasingly, in your home. CITS140 I is the first step along your path to being able to use computers to solve problems. Because computers cannot yet work using human languages, computer languages have been devised to allow algorithms encoding solutions to problems to be executed on computers. In this unit you will learn about, and use, the very popular language Python 3. Along the way you will also learn some problem solving techniques and how to create algorithms; you will also learn how computers execute your programs",
+    "credit": "6",
+    "majors": [
+      "Computer Science",
+      "Data Science",
+      "Physics",
+      "International Cybersecurity",
+      "Computing and Data Science",
+      "Artificial Intelligence",
+      "Cybersecurity",
+      "Frontier Physics",
+      "Automation and Robotics Engineering",
+      "Biomedical Engineering",
+      "Software Engineering",
+      "Business Analytics"
+    ],
+    "outcomes": [
+      " create algorithms using computational thinking to solve a range of problems",
+      " write programs using Python 3 to implement algorithms",
+      " demonstrate the process of computational problem solving",
+      " apply common approaches to computational problem solving."
+    ],
+    "assessment": [
+      " mid-semester quiz",
+      " projects and labs",
+      " final examination"
+    ],
+    "prerequisites_text": "Mathematics Applications ATARor MATH1720 Mathematics Fundamentalsor MATX1720 Mathematics Fundamentals or equivalentor  Enrolment in62510 Master of Information Technologyor 62530 Master of Data Science ",
+    "prerequisites_cnf": [
+      [
+        "MATH1720",
+        "MATX1720"
+      ]
+    ],
+    "contact": {
+      "Lectures": "2",
+      "Labs": "2",
+      "WorkshopS": "1"
+    }
+  },
+  "CITS2002": {
+    "code": "CITS2002",
+    "title": "Systems Programming",
+    "school": "Physics, Mathematics and Computing",
+    "board_of_examiners": "02 - Information Technology",
+    "delivery_mode": "Face to face",
+    "level": "2",
+    "description": "Understanding the relationship between a programming language and the contemporary operating systems on which it executes is central to developing many skills in Computer Science. This unit introduces the standard C programming language, on which many other programming languages and systems are based, through a study of core operating system services including input and output, memory management and file systems. The C language is introduced through discussions on basic topics like data types, variables, expressions, control structures, scoping rules, functions and parameter passing. More advanced topics like C's run-time environment, system calls, dynamic memory allocation, pointers and recursion are presented in the context of operating system services related to process execution, memory management and file systems. The importance of process scheduling, memory management and interprocess communication in modern operating systems is discussed in the context of operating system support for multiprogramming. Laboratory and practical class work place a strong focus on the practical application of fundamental programming concepts, with examples designed to compare and contrast many key features of contemporary operating systems.",
+    "credit": "6",
+    "majors": [
+      "Computer Science",
+      "International Cybersecurity",
+      "Computing and Data Science",
+      "Artificial Intelligence",
+      "Cybersecurity",
+      "Automation and Robotics Engineering",
+      "Software Engineering"
+    ],
+    "outcomes": [
+      " identify and appreciate the fundamentals of the imperative programming paradigm, using the standard C programming language as an example",
+      " decide when to choose the C programming language and its standard library for their systems programming requirements",
+      " apply the most appropriate techniques to successfully develop robust systems programs in the C language",
+      " explain the role of an operating system in the wider computing context",
+      " explain the relationship and interactions between an operating system's critical components and their affect on performance",
+      " demonstrate an understanding of the relationship between contemporary operating systems, programming languages and systems-level application programming interfaces."
+    ],
+    "assessment": [
+      " programming",
+      " mid-semester test",
+      " final examination"
+    ],
+    "prerequisites_text": "completion of 6 points of programming-based units",
+    "prerequisites_cnf": [],
+    "contact": {
+      "Lectures": "3",
+      "Laboratories": "2"
+    }
+  },
+  "CITS3005": {
+    "code": "CITS3005",
+    "title": "Knowledge Representation",
+    "school": "Physics, Mathematics and Computing",
+    "board_of_examiners": "02 - Information Technology",
+    "delivery_mode": "Face to face",
+    "level": "3",
+    "description": "Knowledge Representation will cover tools and methodologies for the formal representation of knowledge in a machine readable format, and automated reasoning technologies. These technologies are important for capturing domain specific details and supporting and automating decision making processes. The course will cover: logical foundations of artificial intelligence, including first order, probabilistic and fuzzy logics; formal representation of knowledge domains, including description logics, ontologies and graphical models; reasoning techniques including logic programming and theorem proving; and applications to planning domains.",
+    "credit": "6",
+    "outcomes": [
+      " formulate complex concepts, rules and arguments in an appropriate logical language.",
+      " select suitable tools and formalisms to capture domain specific knowledge in a machine readable format.",
+      " describe the theoretical foundation of logic programming.",
+      " design, verify and implement logic programs.",
+      " design and implement planning systems for a given domain.."
+    ],
+    "assessment": [
+      " workshops",
+      " planning project",
+      " final examination"
+    ],
+    "prerequisites_text": "CITS2200 Data Structures and Algorithmsand CITS2211 Discrete Structures",
+    "prerequisites_cnf": [
+      [
+        "CITS2200"
+      ],
+      [
+        "CITS2211"
+      ]
+    ],
+    "contact": {
+      "Lectures": "2",
+      "Laboratories": "2"
+    }
+  },
+  "CITS4403": {
+    "code": "CITS4403",
+    "title": "Computational Modelling",
+    "school": "Physics, Mathematics and Computing",
+    "board_of_examiners": "02 - Information Technology",
+    "delivery_mode": "Face to face",
+    "level": "4",
+    "description": "This unit explores current research topics in computational modelling. Students develop skills to identify problems, formulate solutions and conduct further research in open questions in this domain.",
+    "credit": "6",
+    "outcomes": [
+      " communicate effectively to present computational models to address a given research hypothesis and qualify the limitations of these models",
+      " analyse and discuss current open research topics in the field of computational modelling",
+      " explain the concepts and technologies used in the field of computational modelling",
+      " design, apply and analyse relevant technologies to solve problems in the field of computational modelling."
+    ],
+    "assessment": [
+      " project",
+      " notebook",
+      " two in-class tests "
+    ],
+    "prerequisites_text": " Enrolment in  in theHON-CMSSE Computer Science and Software Engineering [Honours]or the 62510 Master of Information Technologyor the 62530 Master of Data Scienceorthe 62550 Master of Professional Engineering and the SP-ESOFT Software Engineering specialisationorthe BH008 Bachelor of Advanced Computer Science [Honours] and MJD-ICYDM International Cybersecurity majoror the MJD-ARIDM Artificial Intelligence majoror73660 Master of Medical Physics",
+    "prerequisites_cnf": []
+  }
+}

@@ -1,0 +1,170 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix uwabok: <http://example.org/uwabok#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+uwabok:Assessment a rdfs:Class ;
+    rdfs:subClassOf rdfs:Resource .
+
+uwabok:Major a rdfs:Class ;
+    rdfs:subClassOf rdfs:Resource .
+
+uwabok:Prerequisite a rdfs:Class ;
+    rdfs:subClassOf rdfs:Resource .
+
+uwabok:Unit a rdfs:Class ;
+    rdfs:subClassOf rdfs:Resource .
+
+uwabok:CITS1401 a uwabok:Unit ;
+    uwabok:hasAssessments " final examination",
+        " mid-semester quiz",
+        " projects and labs" ;
+    uwabok:hasCreditPoints "6" ;
+    uwabok:hasDescription "Computers are everywhere and in nearly everything - the watch you wear, the phone you use, the car you drive, the games you play and, increasingly, in your home. CITS140 I is the first step along your path to being able to use computers to solve problems. Because computers cannot yet work using human languages, computer languages have been devised to allow algorithms encoding solutions to problems to be executed on computers. In this unit you will learn about, and use, the very popular language Python 3. Along the way you will also learn some problem solving techniques and how to create algorithms; you will also learn how computers execute your programs" ;
+    uwabok:hasLevel "1" ;
+    uwabok:hasOutcomes " apply common approaches to computational problem solving.",
+        " create algorithms using computational thinking to solve a range of problems",
+        " demonstrate the process of computational problem solving",
+        " write programs using Python 3 to implement algorithms" ;
+    uwabok:hasPrerequisites "MATH1720",
+        "MATX1720",
+        "Mathematics Applications ATARor MATH1720 Mathematics Fundamentalsor MATX1720 Mathematics Fundamentals or equivalentor  Enrolment in62510 Master of Information Technologyor 62530 Master of Data Science " ;
+    uwabok:hasTitle "Computational Thinking with Python" ;
+    uwabok:hasUnitCode "CITS1401" .
+
+uwabok:CITS2002 a uwabok:Unit ;
+    uwabok:hasAssessments " final examination",
+        " mid-semester test",
+        " programming" ;
+    uwabok:hasCreditPoints "6" ;
+    uwabok:hasDescription "Understanding the relationship between a programming language and the contemporary operating systems on which it executes is central to developing many skills in Computer Science. This unit introduces the standard C programming language, on which many other programming languages and systems are based, through a study of core operating system services including input and output, memory management and file systems. The C language is introduced through discussions on basic topics like data types, variables, expressions, control structures, scoping rules, functions and parameter passing. More advanced topics like C's run-time environment, system calls, dynamic memory allocation, pointers and recursion are presented in the context of operating system services related to process execution, memory management and file systems. The importance of process scheduling, memory management and interprocess communication in modern operating systems is discussed in the context of operating system support for multiprogramming. Laboratory and practical class work place a strong focus on the practical application of fundamental programming concepts, with examples designed to compare and contrast many key features of contemporary operating systems." ;
+    uwabok:hasLevel "2" ;
+    uwabok:hasOutcomes " apply the most appropriate techniques to successfully develop robust systems programs in the C language",
+        " decide when to choose the C programming language and its standard library for their systems programming requirements",
+        " demonstrate an understanding of the relationship between contemporary operating systems, programming languages and systems-level application programming interfaces.",
+        " explain the relationship and interactions between an operating system's critical components and their affect on performance",
+        " explain the role of an operating system in the wider computing context",
+        " identify and appreciate the fundamentals of the imperative programming paradigm, using the standard C programming language as an example" ;
+    uwabok:hasPrerequisites "completion of 6 points of programming-based units" ;
+    uwabok:hasTitle "Systems Programming" ;
+    uwabok:hasUnitCode "CITS2002" .
+
+uwabok:CITS3005 a uwabok:Unit ;
+    uwabok:hasAssessments " final examination",
+        " planning project",
+        " workshops" ;
+    uwabok:hasCreditPoints "6" ;
+    uwabok:hasDescription "Knowledge Representation will cover tools and methodologies for the formal representation of knowledge in a machine readable format, and automated reasoning technologies. These technologies are important for capturing domain specific details and supporting and automating decision making processes. The course will cover: logical foundations of artificial intelligence, including first order, probabilistic and fuzzy logics; formal representation of knowledge domains, including description logics, ontologies and graphical models; reasoning techniques including logic programming and theorem proving; and applications to planning domains." ;
+    uwabok:hasLevel "3" ;
+    uwabok:hasOutcomes " describe the theoretical foundation of logic programming.",
+        " design and implement planning systems for a given domain..",
+        " design, verify and implement logic programs.",
+        " formulate complex concepts, rules and arguments in an appropriate logical language.",
+        " select suitable tools and formalisms to capture domain specific knowledge in a machine readable format." ;
+    uwabok:hasPrerequisites "CITS2200",
+        "CITS2200 Data Structures and Algorithmsand CITS2211 Discrete Structures",
+        "CITS2211" ;
+    uwabok:hasTitle "Knowledge Representation" ;
+    uwabok:hasUnitCode "CITS3005" .
+
+uwabok:CITS4403 a uwabok:Unit ;
+    uwabok:hasAssessments " notebook",
+        " project",
+        " two in-class tests " ;
+    uwabok:hasCreditPoints "6" ;
+    uwabok:hasDescription "This unit explores current research topics in computational modelling. Students develop skills to identify problems, formulate solutions and conduct further research in open questions in this domain." ;
+    uwabok:hasLevel "4" ;
+    uwabok:hasOutcomes " analyse and discuss current open research topics in the field of computational modelling",
+        " communicate effectively to present computational models to address a given research hypothesis and qualify the limitations of these models",
+        " design, apply and analyse relevant technologies to solve problems in the field of computational modelling.",
+        " explain the concepts and technologies used in the field of computational modelling" ;
+    uwabok:hasPrerequisites " Enrolment in  in theHON-CMSSE Computer Science and Software Engineering [Honours]or the 62510 Master of Information Technologyor the 62530 Master of Data Scienceorthe 62550 Master of Professional Engineering and the SP-ESOFT Software Engineering specialisationorthe BH008 Bachelor of Advanced Computer Science [Honours] and MJD-ICYDM International Cybersecurity majoror the MJD-ARIDM Artificial Intelligence majoror73660 Master of Medical Physics" ;
+    uwabok:hasTitle "Computational Modelling" ;
+    uwabok:hasUnitCode "CITS4403" .
+
+uwabok:hasAssessments a rdf:Property ;
+    rdfs:domain uwabok:Unit ;
+    rdfs:range uwabok:Assessment .
+
+uwabok:hasAuditionPrerequisites a rdf:Property .
+
+uwabok:hasBridgingCourses a rdf:Property ;
+    rdfs:domain uwabok:Major ;
+    rdfs:range xsd:string .
+
+uwabok:hasCreditPoints a rdf:Property ;
+    rdfs:domain uwabok:Unit ;
+    rdfs:range xsd:integer .
+
+uwabok:hasDescription a rdf:Property ;
+    rdfs:domain uwabok:Unit ;
+    rdfs:range xsd:string .
+
+uwabok:hasEnrollmentPrerequisites a rdf:Property .
+
+uwabok:hasExamAssessment a rdf:Property .
+
+uwabok:hasLevel a rdf:Property ;
+    rdfs:domain uwabok:Unit ;
+    rdfs:range xsd:string .
+
+uwabok:hasMajorCode a rdf:Property ;
+    rdfs:domain uwabok:Major ;
+    rdfs:range xsd:string .
+
+uwabok:hasMajorCourses a rdf:Property ;
+    rdfs:domain uwabok:Major ;
+    rdfs:range xsd:string .
+
+uwabok:hasMajorDescription a rdf:Property ;
+    rdfs:domain uwabok:Major ;
+    rdfs:range xsd:string .
+
+uwabok:hasMajorOutcomes a rdf:Property ;
+    rdfs:domain uwabok:Major ;
+    rdfs:range xsd:string .
+
+uwabok:hasMajorPrerequisites a rdf:Property ;
+    rdfs:domain uwabok:Major ;
+    rdfs:range uwabok:Prerequisite .
+
+uwabok:hasMajorTitle a rdf:Property ;
+    rdfs:domain uwabok:Major ;
+    rdfs:range xsd:string .
+
+uwabok:hasMajorUnits a rdf:Property ;
+    rdfs:domain uwabok:Major ;
+    rdfs:range uwabok:Unit .
+
+uwabok:hasOtherAssessments a rdf:Property .
+
+uwabok:hasOtherPrerequisites a rdf:Property .
+
+uwabok:hasOutcomes a rdf:Property ;
+    rdfs:domain uwabok:Unit ;
+    rdfs:range xsd:string .
+
+uwabok:hasPrerequisiteCnf a rdf:Property .
+
+uwabok:hasPrerequisites a rdf:Property ;
+    rdfs:domain uwabok:Unit ;
+    rdfs:range uwabok:Prerequisite .
+
+uwabok:hasPresentationAssessment a rdf:Property .
+
+uwabok:hasProjectAssessment a rdf:Property ;
+    rdfs:domain uwabok:Assessment ;
+    rdfs:range xsd:string .
+
+uwabok:hasReportAssessment a rdf:Property .
+
+uwabok:hasSubjectPrerequisites a rdf:Property .
+
+uwabok:hasTitle a rdf:Property ;
+    rdfs:domain uwabok:Unit ;
+    rdfs:range xsd:string .
+
+uwabok:hasUnitCode a rdf:Property ;
+    rdfs:domain uwabok:Unit ;
+    rdfs:range xsd:string .
+
