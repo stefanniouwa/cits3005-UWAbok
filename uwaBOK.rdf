@@ -9,88 +9,121 @@ uwabok:Assessment a rdfs:Class ;
 uwabok:Major a rdfs:Class ;
     rdfs:subClassOf rdfs:Resource .
 
+uwabok:MajorPrereq a rdfs:Class ;
+    rdfs:subClassOf uwabok:Prerequisite .
+
 uwabok:Prerequisite a rdfs:Class ;
     rdfs:subClassOf rdfs:Resource .
 
 uwabok:Unit a rdfs:Class ;
     rdfs:subClassOf rdfs:Resource .
 
-uwabok:CITS1401 a uwabok:Unit ;
-    uwabok:hasAssessments " final examination",
-        " mid-semester quiz",
-        " projects and labs" ;
-    uwabok:hasCreditPoints "6" ;
-    uwabok:hasDescription "Computers are everywhere and in nearly everything - the watch you wear, the phone you use, the car you drive, the games you play and, increasingly, in your home. CITS140 I is the first step along your path to being able to use computers to solve problems. Because computers cannot yet work using human languages, computer languages have been devised to allow algorithms encoding solutions to problems to be executed on computers. In this unit you will learn about, and use, the very popular language Python 3. Along the way you will also learn some problem solving techniques and how to create algorithms; you will also learn how computers execute your programs" ;
-    uwabok:hasLevel "1" ;
-    uwabok:hasOutcomes " apply common approaches to computational problem solving.",
-        " create algorithms using computational thinking to solve a range of problems",
-        " demonstrate the process of computational problem solving",
-        " write programs using Python 3 to implement algorithms" ;
-    uwabok:hasPrerequisites "MATH1720",
-        "MATX1720",
-        "Mathematics Applications ATARor MATH1720 Mathematics Fundamentalsor MATX1720 Mathematics Fundamentals or equivalentor  Enrolment in62510 Master of Information Technologyor 62530 Master of Data Science " ;
-    uwabok:hasTitle "Computational Thinking with Python" ;
-    uwabok:hasUnitCode "CITS1401" .
+uwabok:UnitPrereq a rdfs:Class ;
+    rdfs:subClassOf uwabok:Prerequisite .
 
 uwabok:CITS2002 a uwabok:Unit ;
     uwabok:hasAssessments " final examination",
         " mid-semester test",
         " programming" ;
-    uwabok:hasCreditPoints "6" ;
+    uwabok:hasContactHours 5 ;
+    uwabok:hasCreditPoints 6 ;
     uwabok:hasDescription "Understanding the relationship between a programming language and the contemporary operating systems on which it executes is central to developing many skills in Computer Science. This unit introduces the standard C programming language, on which many other programming languages and systems are based, through a study of core operating system services including input and output, memory management and file systems. The C language is introduced through discussions on basic topics like data types, variables, expressions, control structures, scoping rules, functions and parameter passing. More advanced topics like C's run-time environment, system calls, dynamic memory allocation, pointers and recursion are presented in the context of operating system services related to process execution, memory management and file systems. The importance of process scheduling, memory management and interprocess communication in modern operating systems is discussed in the context of operating system support for multiprogramming. Laboratory and practical class work place a strong focus on the practical application of fundamental programming concepts, with examples designed to compare and contrast many key features of contemporary operating systems." ;
-    uwabok:hasLevel "2" ;
+    uwabok:hasLevel 2 ;
     uwabok:hasOutcomes " apply the most appropriate techniques to successfully develop robust systems programs in the C language",
         " decide when to choose the C programming language and its standard library for their systems programming requirements",
         " demonstrate an understanding of the relationship between contemporary operating systems, programming languages and systems-level application programming interfaces.",
         " explain the relationship and interactions between an operating system's critical components and their affect on performance",
         " explain the role of an operating system in the wider computing context",
         " identify and appreciate the fundamentals of the imperative programming paradigm, using the standard C programming language as an example" ;
-    uwabok:hasPrerequisites "completion of 6 points of programming-based units" ;
     uwabok:hasTitle "Systems Programming" ;
-    uwabok:hasUnitCode "CITS2002" .
+    uwabok:hasUnitCode "CITS2002" ;
+    uwabok:hasUnitPrereqText "completion of 6 points of programming-based units" .
 
 uwabok:CITS3005 a uwabok:Unit ;
     uwabok:hasAssessments " final examination",
         " planning project",
         " workshops" ;
-    uwabok:hasCreditPoints "6" ;
+    uwabok:hasContactHours 4 ;
+    uwabok:hasCreditPoints 6 ;
     uwabok:hasDescription "Knowledge Representation will cover tools and methodologies for the formal representation of knowledge in a machine readable format, and automated reasoning technologies. These technologies are important for capturing domain specific details and supporting and automating decision making processes. The course will cover: logical foundations of artificial intelligence, including first order, probabilistic and fuzzy logics; formal representation of knowledge domains, including description logics, ontologies and graphical models; reasoning techniques including logic programming and theorem proving; and applications to planning domains." ;
-    uwabok:hasLevel "3" ;
+    uwabok:hasLevel 3 ;
     uwabok:hasOutcomes " describe the theoretical foundation of logic programming.",
         " design and implement planning systems for a given domain..",
         " design, verify and implement logic programs.",
         " formulate complex concepts, rules and arguments in an appropriate logical language.",
         " select suitable tools and formalisms to capture domain specific knowledge in a machine readable format." ;
-    uwabok:hasPrerequisites "CITS2200",
-        "CITS2200 Data Structures and Algorithmsand CITS2211 Discrete Structures",
-        "CITS2211" ;
+    uwabok:hasPrerequisites uwabok:CITS2200,
+        uwabok:CITS2211 ;
     uwabok:hasTitle "Knowledge Representation" ;
-    uwabok:hasUnitCode "CITS3005" .
+    uwabok:hasUnitCode "CITS3005" ;
+    uwabok:hasUnitPrereqText "CITS2200 Data Structures and Algorithmsand CITS2211 Discrete Structures" .
+
+uwabok:CITS3007 a uwabok:Unit ;
+    uwabok:hasAssessments " exam",
+        " project",
+        " tests" ;
+    uwabok:hasContactHours 4 ;
+    uwabok:hasCreditPoints 6 ;
+    uwabok:hasDescription "This unit covers different types of security vulnerabilities of computer systems and how to prevent and mitigate the effects of them.  Topics include: (1) memory and Arithmetic Errors; (2) validated input and inter-process communication; (3) race conditions and file operations; (4) cryptographic practises; and (5) development practices." ;
+    uwabok:hasLevel 3 ;
+    uwabok:hasOutcomes " apply industry standard secure programming practices",
+        " demonstrate an understanding of the basic execution model of computer programs and how programs represent and access their resources",
+        " develop a systems approach to the evaluation of a software system to identify security vulnerabilities.",
+        " explain a range of common software vulnerabilities, the threats that they pose to correct execution, and steps to mitigate them",
+        " validate a program's input data and external connections" ;
+    uwabok:hasTitle "Secure Coding" ;
+    uwabok:hasUnitCode "CITS3007" ;
+    uwabok:hasUnitPrereqText "completion of 12 points of programming-based units" .
+
+uwabok:CITS4402 a uwabok:Unit ;
+    uwabok:hasAssessments " final exam",
+        " laboratory solutions ",
+        " research project" ;
+    uwabok:hasContactHours 0 ;
+    uwabok:hasCreditPoints 6 ;
+    uwabok:hasDescription "Computer vision is the science of automatically computing information and making decisions from an observed image, image set or an image sequence. It combines concepts from 'image processing' (in the spatial and frequency domains) and 'pattern recognition'. Computer vision has a wide number of potential applications, including satellite imaging, control and measurement, industrial inspection, surveillance (e.g. face recognition) and medical applications. This unit covers topics such as binary image analysis, greyscale image manipulation, linear and nonlinear filtering, feature extraction, image enhancement, image segmentation and recognition. It also covers camera calibration and projective geometry and how three-dimensional information can be reconstructed from single images, stereo pairs of images and motion sequences. In the future, it is anticipated that computer vision systems will become prevailing, and that vision technology will be more applied across a broad range of business and consumer products. This will result in a strong industry demand for computer vision engineers—for people who understand vision technology and know how to apply it in real-world problems." ;
+    uwabok:hasLevel 4 ;
+    uwabok:hasOutcomes " conduct independent research on a chosen research topic, write a small research report, and give an oral presentation",
+        " critique various methodologies for solving problems in computer vision and image processing.",
+        " demonstrate logical thinking and problem-solving skills",
+        " describe the theories and principles in computer vision",
+        " explain computer vision problems in writing",
+        " explain the technical theory behind formation of images",
+        " process images in both the spatial and frequency domains",
+        " write MATLAB code to solve computer vision problems" ;
+    uwabok:hasPrerequisites uwabok:CITS1401,
+        uwabok:CITS2401,
+        uwabok:CITX1401,
+        uwabok:MATX1012 ;
+    uwabok:hasTitle "Computer Vision" ;
+    uwabok:hasUnitCode "CITS4402" ;
+    uwabok:hasUnitPrereqText " Enrolment in HON-CMSSE Computer Science and Software Engineeringor 62530 Master of Data Scienceor62550 Master of Professional Engineering and SP-EBIOM Biomedical Engineering specialisationor SP-EELEC Electrical and Electronic Engineering specialisationor SP-ESOFT Software Engineering specialisationor53560 Master of Physics and SP-MEDPH Medical PhysicsorBH008 Bachelor of Advanced Computer Science [Honours] and MJD-ARIDM Artificial IntelligenceorBachelor of Engineering (Honours) or an associated Combined Degree and  Successful completion of96 points and ( CITS2401 Computer Analysis and Visualisationor CITS1401 Computational Thinking with Pythonor CITX1401 Computational Thinking with Python  and  MATH1012 Mathematical Theory and Methodsor MATX1012 Mathematical Theory and Methods)" .
 
 uwabok:CITS4403 a uwabok:Unit ;
     uwabok:hasAssessments " notebook",
         " project",
         " two in-class tests " ;
-    uwabok:hasCreditPoints "6" ;
+    uwabok:hasContactHours 0 ;
+    uwabok:hasCreditPoints 6 ;
     uwabok:hasDescription "This unit explores current research topics in computational modelling. Students develop skills to identify problems, formulate solutions and conduct further research in open questions in this domain." ;
-    uwabok:hasLevel "4" ;
+    uwabok:hasLevel 4 ;
     uwabok:hasOutcomes " analyse and discuss current open research topics in the field of computational modelling",
         " communicate effectively to present computational models to address a given research hypothesis and qualify the limitations of these models",
         " design, apply and analyse relevant technologies to solve problems in the field of computational modelling.",
         " explain the concepts and technologies used in the field of computational modelling" ;
-    uwabok:hasPrerequisites " Enrolment in  in theHON-CMSSE Computer Science and Software Engineering [Honours]or the 62510 Master of Information Technologyor the 62530 Master of Data Scienceorthe 62550 Master of Professional Engineering and the SP-ESOFT Software Engineering specialisationorthe BH008 Bachelor of Advanced Computer Science [Honours] and MJD-ICYDM International Cybersecurity majoror the MJD-ARIDM Artificial Intelligence majoror73660 Master of Medical Physics" ;
     uwabok:hasTitle "Computational Modelling" ;
-    uwabok:hasUnitCode "CITS4403" .
+    uwabok:hasUnitCode "CITS4403" ;
+    uwabok:hasUnitPrereqText " Enrolment in  in theHON-CMSSE Computer Science and Software Engineering [Honours]or the 62510 Master of Information Technologyor the 62530 Master of Data Scienceorthe 62550 Master of Professional Engineering and the SP-ESOFT Software Engineering specialisationorthe BH008 Bachelor of Advanced Computer Science [Honours] and MJD-ICYDM International Cybersecurity majoror the MJD-ARIDM Artificial Intelligence majoror73660 Master of Medical Physics" .
 
 uwabok:hasAssessments a rdf:Property ;
     rdfs:domain uwabok:Unit ;
     rdfs:range uwabok:Assessment .
 
-uwabok:hasAuditionPrerequisites a rdf:Property .
-
 uwabok:hasBridgingCourses a rdf:Property ;
     rdfs:domain uwabok:Major ;
     rdfs:range xsd:string .
+
+uwabok:hasContactHours a rdf:Property .
 
 uwabok:hasCreditPoints a rdf:Property ;
     rdfs:domain uwabok:Unit ;
@@ -99,8 +132,6 @@ uwabok:hasCreditPoints a rdf:Property ;
 uwabok:hasDescription a rdf:Property ;
     rdfs:domain uwabok:Unit ;
     rdfs:range xsd:string .
-
-uwabok:hasEnrollmentPrerequisites a rdf:Property .
 
 uwabok:hasExamAssessment a rdf:Property .
 
@@ -124,9 +155,9 @@ uwabok:hasMajorOutcomes a rdf:Property ;
     rdfs:domain uwabok:Major ;
     rdfs:range xsd:string .
 
-uwabok:hasMajorPrerequisites a rdf:Property ;
-    rdfs:domain uwabok:Major ;
-    rdfs:range uwabok:Prerequisite .
+uwabok:hasMajorPrereqText a rdf:Property ;
+    rdfs:domain uwabok:MajorPrereq ;
+    rdfs:range xsd:string .
 
 uwabok:hasMajorTitle a rdf:Property ;
     rdfs:domain uwabok:Major ;
@@ -138,13 +169,9 @@ uwabok:hasMajorUnits a rdf:Property ;
 
 uwabok:hasOtherAssessments a rdf:Property .
 
-uwabok:hasOtherPrerequisites a rdf:Property .
-
 uwabok:hasOutcomes a rdf:Property ;
     rdfs:domain uwabok:Unit ;
     rdfs:range xsd:string .
-
-uwabok:hasPrerequisiteCnf a rdf:Property .
 
 uwabok:hasPrerequisites a rdf:Property ;
     rdfs:domain uwabok:Unit ;
@@ -158,8 +185,6 @@ uwabok:hasProjectAssessment a rdf:Property ;
 
 uwabok:hasReportAssessment a rdf:Property .
 
-uwabok:hasSubjectPrerequisites a rdf:Property .
-
 uwabok:hasTitle a rdf:Property ;
     rdfs:domain uwabok:Unit ;
     rdfs:range xsd:string .
@@ -167,4 +192,44 @@ uwabok:hasTitle a rdf:Property ;
 uwabok:hasUnitCode a rdf:Property ;
     rdfs:domain uwabok:Unit ;
     rdfs:range xsd:string .
+
+uwabok:hasUnitPrereqCNF a rdf:Property ;
+    rdfs:domain uwabok:UnitPrereq ;
+    rdfs:range uwabok:Unit .
+
+uwabok:hasUnitPrereqText a rdf:Property ;
+    rdfs:domain uwabok:UnitPrereq ;
+    rdfs:range xsd:string .
+
+uwabok:CITS1401 a uwabok:Unit ;
+    uwabok:hasAssessments " final examination",
+        " mid-semester quiz",
+        " projects and labs" ;
+    uwabok:hasContactHours 5 ;
+    uwabok:hasCreditPoints 6 ;
+    uwabok:hasDescription "Computers are everywhere and in nearly everything - the watch you wear, the phone you use, the car you drive, the games you play and, increasingly, in your home. CITS140 I is the first step along your path to being able to use computers to solve problems. Because computers cannot yet work using human languages, computer languages have been devised to allow algorithms encoding solutions to problems to be executed on computers. In this unit you will learn about, and use, the very popular language Python 3. Along the way you will also learn some problem solving techniques and how to create algorithms; you will also learn how computers execute your programs" ;
+    uwabok:hasLevel 1 ;
+    uwabok:hasOutcomes " apply common approaches to computational problem solving.",
+        " create algorithms using computational thinking to solve a range of problems",
+        " demonstrate the process of computational problem solving",
+        " write programs using Python 3 to implement algorithms" ;
+    uwabok:hasPrerequisites uwabok:MATH1720,
+        uwabok:MATX1720 ;
+    uwabok:hasTitle "Computational Thinking with Python" ;
+    uwabok:hasUnitCode "CITS1401" ;
+    uwabok:hasUnitPrereqText "Mathematics Applications ATARor MATH1720 Mathematics Fundamentalsor MATX1720 Mathematics Fundamentals or equivalentor  Enrolment in62510 Master of Information Technologyor 62530 Master of Data Science " .
+
+uwabok:CITS2200 a uwabok:Unit .
+
+uwabok:CITS2211 a uwabok:Unit .
+
+uwabok:CITS2401 a uwabok:Unit .
+
+uwabok:CITX1401 a uwabok:Unit .
+
+uwabok:MATH1720 a uwabok:Unit .
+
+uwabok:MATX1012 a uwabok:Unit .
+
+uwabok:MATX1720 a uwabok:Unit .
 

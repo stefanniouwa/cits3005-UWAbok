@@ -16,6 +16,18 @@ g.add((uwabok.Major, RDF.type, RDFS.Class))
 g.add((uwabok.Assessment, RDF.type, RDFS.Class))
 g.add((uwabok.Prerequisite, RDF.type, RDFS.Class))
 
+g.add((uwabok.UnitPrereq, RDF.type, RDFS.Class))
+g.add((uwabok.MajorPrereq, RDF.type, RDFS.Class))
+
+
+# Define subclass relationships
+g.add((uwabok.Unit, RDFS.subClassOf, RDFS.Resource))
+g.add((uwabok.Major, RDFS.subClassOf, RDFS.Resource))
+g.add((uwabok.Assessment, RDFS.subClassOf, RDFS.Resource))
+g.add((uwabok.Prerequisite, RDFS.subClassOf, RDFS.Resource))
+g.add((uwabok.UnitPrereq, RDFS.subClassOf, uwabok.Prerequisite))
+g.add((uwabok.MajorPrereq, RDFS.subClassOf, uwabok.Prerequisite))
+
 # Define properties for Units
 g.add((uwabok.hasUnitCode, RDF.type, RDF.Property))
 g.add((uwabok.hasTitle, RDF.type, RDF.Property))
@@ -25,13 +37,16 @@ g.add((uwabok.hasOutcomes, RDF.type, RDF.Property))
 g.add((uwabok.hasCreditPoints, RDF.type, RDF.Property))
 g.add((uwabok.hasAssessments, RDF.type, RDF.Property))
 g.add((uwabok.hasPrerequisites, RDF.type, RDF.Property))
+g.add((uwabok.hasUnitPrereqText, RDF.type, RDF.Property))
+g.add((uwabok.hasUnitPrereqCNF, RDF.type, RDF.Property))
+g.add((uwabok.hasContactHours, RDF.type, RDF.Property))
 
 # Define properties for Majors
 g.add((uwabok.hasMajorCode, RDF.type, RDF.Property))
 g.add((uwabok.hasMajorTitle, RDF.type, RDF.Property))
 g.add((uwabok.hasMajorDescription, RDF.type, RDF.Property))
 g.add((uwabok.hasMajorOutcomes, RDF.type, RDF.Property))
-g.add((uwabok.hasMajorPrerequisites, RDF.type, RDF.Property))
+g.add((uwabok.hasMajorPrereqText, RDF.type, RDF.Property))
 g.add((uwabok.hasMajorUnits, RDF.type, RDF.Property))
 g.add((uwabok.hasMajorCourses, RDF.type, RDF.Property))
 g.add((uwabok.hasBridgingCourses, RDF.type, RDF.Property))
@@ -43,18 +58,6 @@ g.add((uwabok.hasReportAssessment, RDF.type, RDF.Property))
 g.add((uwabok.hasPresentationAssessment, RDF.type, RDF.Property))
 g.add((uwabok.hasOtherAssessments, RDF.type, RDF.Property))
 
-# Define properties for Prerequisites
-g.add((uwabok.hasEnrollmentPrerequisites, RDF.type, RDF.Property))
-g.add((uwabok.hasPrerequisiteCnf, RDF.type, RDF.Property))
-g.add((uwabok.hasOtherPrerequisites, RDF.type, RDF.Property))
-g.add((uwabok.hasSubjectPrerequisites, RDF.type, RDF.Property))
-g.add((uwabok.hasAuditionPrerequisites, RDF.type, RDF.Property))
-
-# Define subclass relationships
-g.add((uwabok.Unit, RDFS.subClassOf, RDFS.Resource))
-g.add((uwabok.Major, RDFS.subClassOf, RDFS.Resource))
-g.add((uwabok.Assessment, RDFS.subClassOf, RDFS.Resource))
-g.add((uwabok.Prerequisite, RDFS.subClassOf, RDFS.Resource))
 
 # Define domain and range relationships
 # For example, the following relationships assume that these properties apply to classes specified.
@@ -66,11 +69,13 @@ g.add((uwabok.hasOutcomes, RDFS.domain, uwabok.Unit))
 g.add((uwabok.hasCreditPoints, RDFS.domain, uwabok.Unit))
 g.add((uwabok.hasAssessments, RDFS.domain, uwabok.Unit))
 g.add((uwabok.hasPrerequisites, RDFS.domain, uwabok.Unit))
+g.add((uwabok.hasUnitPrereqText, RDFS.domain, uwabok.UnitPrereq))
+g.add((uwabok.hasUnitPrereqCNF, RDFS.domain, uwabok.UnitPrereq))
 g.add((uwabok.hasMajorCode, RDFS.domain, uwabok.Major))
 g.add((uwabok.hasMajorTitle, RDFS.domain, uwabok.Major))
 g.add((uwabok.hasMajorDescription, RDFS.domain, uwabok.Major))
 g.add((uwabok.hasMajorOutcomes, RDFS.domain, uwabok.Major))
-g.add((uwabok.hasMajorPrerequisites, RDFS.domain, uwabok.Major))
+g.add((uwabok.hasMajorPrereqText, RDFS.domain, uwabok.MajorPrereq))
 g.add((uwabok.hasMajorUnits, RDFS.domain, uwabok.Major))
 g.add((uwabok.hasMajorCourses, RDFS.domain, uwabok.Major))
 g.add((uwabok.hasBridgingCourses, RDFS.domain, uwabok.Major))
@@ -86,11 +91,13 @@ g.add((uwabok.hasOutcomes, RDFS.range, XSD.string))
 g.add((uwabok.hasCreditPoints, RDFS.range, XSD.integer))
 g.add((uwabok.hasAssessments, RDFS.range, uwabok.Assessment))
 g.add((uwabok.hasPrerequisites, RDFS.range, uwabok.Prerequisite))
+g.add((uwabok.hasUnitPrereqText, RDFS.range, XSD.string))
+g.add((uwabok.hasUnitPrereqCNF, RDFS.range, uwabok.Unit))
 g.add((uwabok.hasMajorCode, RDFS.range, XSD.string))
 g.add((uwabok.hasMajorTitle, RDFS.range, XSD.string))
 g.add((uwabok.hasMajorDescription, RDFS.range, XSD.string))
 g.add((uwabok.hasMajorOutcomes, RDFS.range, XSD.string))
-g.add((uwabok.hasMajorPrerequisites, RDFS.range, uwabok.Prerequisite))
+g.add((uwabok.hasMajorPrereqText, RDFS.range, XSD.string))
 g.add((uwabok.hasMajorUnits, RDFS.range, uwabok.Unit))
 g.add((uwabok.hasMajorCourses, RDFS.range, XSD.string))
 g.add((uwabok.hasBridgingCourses, RDFS.range, XSD.string))
@@ -190,29 +197,46 @@ for unit_code, unit_info in units_data.items():
     # Add properties and their values
     g.add((unit_uri, uwabok.hasUnitCode, Literal(unit_info['code'])))
     g.add((unit_uri, uwabok.hasTitle, Literal(unit_info['title'])))
-    g.add((unit_uri, uwabok.hasLevel, Literal(unit_info['level'])))
+    g.add((unit_uri, uwabok.hasLevel, Literal(unit_info['level'], datatype=XSD.integer)))
     g.add((unit_uri, uwabok.hasDescription, Literal(unit_info['description'])))
 
     # Outcomes as a list of literals
     for outcome in unit_info['outcomes']:
         g.add((unit_uri, uwabok.hasOutcomes, Literal(outcome)))
 
-    g.add((unit_uri, uwabok.hasCreditPoints, Literal(unit_info['credit'])))
+    g.add((unit_uri, uwabok.hasCreditPoints, Literal(unit_info['credit'], datatype=XSD.integer)))
 
     # Assessments as a list of literals
     for assessment in unit_info['assessment']:
         g.add((unit_uri, uwabok.hasAssessments, Literal(assessment)))
 
-    # Prerequisites information
-    g.add((unit_uri, uwabok.hasPrerequisites, Literal(unit_info['prerequisites_text'])))
+   # Prerequisites text
+    prerequisite_text = unit_info['prerequisites_text']
+    if prerequisite_text:
+        g.add((unit_uri, uwabok.hasUnitPrereqText, Literal(prerequisite_text)))
 
-    # Prerequisites as a list of literals
+    # Prerequisites cnf
     for prerequisite_cnf in unit_info['prerequisites_cnf']:
-        for prerequisite in prerequisite_cnf:
-            g.add((unit_uri, uwabok.hasPrerequisites, Literal(prerequisite)))
+        for prerequisite_unit in prerequisite_cnf:
+            if prerequisite_unit:
+                # Create a URI for the prerequisite unit (if it's not an empty string)
+                prereq_unit_uri = uwabok[prerequisite_unit]
+                g.add((unit_uri, uwabok.hasPrerequisites, prereq_unit_uri))
+                g.add((prereq_unit_uri, RDF.type, uwabok.Unit))
 
 # Add additional subclass, subproperty, domain, and range relationships as needed
+    # Contact Hours
+    contact_hours = unit_info.get('contact', {})  # Get the contact hours data
 
+    # Calculate the total contact hours
+    total_contact_hours = 0
+    for contact_type, hours in contact_hours.items():
+        try:
+            total_contact_hours += int(hours)
+        except ValueError:
+            pass  # Handle non-integer values gracefully
+
+    g.add((unit_uri, uwabok.hasContactHours, Literal(total_contact_hours, datatype=XSD.integer)))
 
 # Serialize the RDF graph to a file
 g.serialize("uwaBOK.rdf")

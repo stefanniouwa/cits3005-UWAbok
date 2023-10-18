@@ -141,5 +141,80 @@
     ],
     "prerequisites_text": " Enrolment in  in theHON-CMSSE Computer Science and Software Engineering [Honours]or the 62510 Master of Information Technologyor the 62530 Master of Data Scienceorthe 62550 Master of Professional Engineering and the SP-ESOFT Software Engineering specialisationorthe BH008 Bachelor of Advanced Computer Science [Honours] and MJD-ICYDM International Cybersecurity majoror the MJD-ARIDM Artificial Intelligence majoror73660 Master of Medical Physics",
     "prerequisites_cnf": []
+  },
+  "CITS3007": {
+    "code": "CITS3007",
+    "title": "Secure Coding",
+    "school": "Physics, Mathematics and Computing",
+    "board_of_examiners": "02 - Information Technology",
+    "delivery_mode": "Face to face",
+    "level": "3",
+    "description": "This unit covers different types of security vulnerabilities of computer systems and how to prevent and mitigate the effects of them.  Topics include: (1) memory and Arithmetic Errors; (2) validated input and inter-process communication; (3) race conditions and file operations; (4) cryptographic practises; and (5) development practices.",
+    "credit": "6",
+    "majors": [
+      "International Cybersecurity",
+      "Artificial Intelligence",
+      "Cybersecurity",
+      "Software Engineering"
+    ],
+    "outcomes": [
+      " demonstrate an understanding of the basic execution model of computer programs and how programs represent and access their resources",
+      " explain a range of common software vulnerabilities, the threats that they pose to correct execution, and steps to mitigate them",
+      " validate a program's input data and external connections",
+      " apply industry standard secure programming practices",
+      " develop a systems approach to the evaluation of a software system to identify security vulnerabilities."
+    ],
+    "assessment": [
+      " tests",
+      " project",
+      " exam"
+    ],
+    "prerequisites_text": "completion of 12 points of programming-based units",
+    "prerequisites_cnf": [],
+    "advisable_prior_study": [
+      "CITS2002"
+    ],
+    "contact": {
+      "lectures": "2",
+      "laboratories": "2"
+    }
+  },
+  "CITS4402": {
+    "code": "CITS4402",
+    "title": "Computer Vision",
+    "school": "Physics, Mathematics and Computing",
+    "board_of_examiners": "02 - Information Technology",
+    "delivery_mode": "Face to face",
+    "level": "4",
+    "description": "Computer vision is the science of automatically computing information and making decisions from an observed image, image set or an image sequence. It combines concepts from 'image processing' (in the spatial and frequency domains) and 'pattern recognition'. Computer vision has a wide number of potential applications, including satellite imaging, control and measurement, industrial inspection, surveillance (e.g. face recognition) and medical applications. This unit covers topics such as binary image analysis, greyscale image manipulation, linear and nonlinear filtering, feature extraction, image enhancement, image segmentation and recognition. It also covers camera calibration and projective geometry and how three-dimensional information can be reconstructed from single images, stereo pairs of images and motion sequences. In the future, it is anticipated that computer vision systems will become prevailing, and that vision technology will be more applied across a broad range of business and consumer products. This will result in a strong industry demand for computer vision engineers\u2014for people who understand vision technology and know how to apply it in real-world problems.",
+    "credit": "6",
+    "outcomes": [
+      " explain computer vision problems in writing",
+      " write MATLAB code to solve computer vision problems",
+      " describe the theories and principles in computer vision",
+      " conduct independent research on a chosen research topic, write a small research report, and give an oral presentation",
+      " demonstrate logical thinking and problem-solving skills",
+      " process images in both the spatial and frequency domains",
+      " explain the technical theory behind formation of images",
+      " critique various methodologies for solving problems in computer vision and image processing."
+    ],
+    "assessment": [
+      " laboratory solutions ",
+      " research project",
+      " final exam"
+    ],
+    "prerequisites_text": " Enrolment in HON-CMSSE Computer Science and Software Engineeringor 62530 Master of Data Scienceor62550 Master of Professional Engineering and SP-EBIOM Biomedical Engineering specialisationor SP-EELEC Electrical and Electronic Engineering specialisationor SP-ESOFT Software Engineering specialisationor53560 Master of Physics and SP-MEDPH Medical PhysicsorBH008 Bachelor of Advanced Computer Science [Honours] and MJD-ARIDM Artificial IntelligenceorBachelor of Engineering (Honours) or an associated Combined Degree and  Successful completion of96 points and ( CITS2401 Computer Analysis and Visualisationor CITS1401 Computational Thinking with Pythonor CITX1401 Computational Thinking with Python  and  MATH1012 Mathematical Theory and Methodsor MATX1012 Mathematical Theory and Methods)",
+    "prerequisites_cnf": [
+      [
+        "CITS2401",
+        "CITS1401",
+        "CITX1401",
+        "MATX1012"
+      ]
+    ],
+    "advisable_prior_study": [
+      "CITS2401",
+      "MATH1012"
+    ]
   }
 }
