@@ -4,36 +4,35 @@
 @prefix uwabok: <http://example.org/uwabok#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 
-# SHACL shape for units with prerequisites
-uwabok:UnitShape
+uwabok:UnitPrerequisiteShape
     a sh:NodeShape ;
     sh:targetClass uwabok:Unit ;
     sh:property [
-        sh:path uwabok:hasPrerequisites ;
-        sh:nodeKind sh:IRI ;
+        sh:path uwabok:hasUnitPrereqCNF ;
         sh:property [
             sh:path uwabok:hasLevel ;
-            sh:lessThan uwabok:hasLevel ;
-            sh:message "Every prerequisite should have a level less than the unit's level." ;
+            sh:minInclusive 1 ;
+            sh:maxExclusive uwabok:hasLevel ;
         ] ;
     ] .
 
-# SHACL shape to prevent units from being their own prerequisites
-uwabok:NoSelfPrerequisiteShape
+uwabok:NotSelfPrerequisiteShape
     a sh:NodeShape ;
     sh:targetClass uwabok:Unit ;
     sh:property [
-        sh:path uwabok:hasPrerequisites ;
-        sh:hasValue uwabok:Unit ;
-        sh:message "A unit should not be its own prerequisite." ;
+        sh:path uwabok:hasUnitPrereqCNF ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:property [
+            sh:path sh:equals ;
+            sh:maxCount 0 ;
+        ] ;
     ] .
 
-# SHACL shape to check contact hours for majors
-uwabok:ContactHoursShape
+uwabok:ContactHoursLimitShape
     a sh:NodeShape ;
     sh:targetClass uwabok:Major ;
     sh:property [
         sh:path uwabok:hasContactHours ;
-        sh:maxExclusive 40 ;
-        sh:message "A major should not require more than 40 contact hours per week." ;
+        sh:maxInclusive 40 ;
     ] .

@@ -1,4 +1,5 @@
 from rdflib import Graph, Namespace, RDF, RDFS, XSD, Literal
+from pyshacl import validate
 import json
 
 # Create an RDF Graph
@@ -185,5 +186,14 @@ for major_code, major_info in majors_data.items():
         # Create a relationship between the major and the unit
         g.add((major_uri, uwabok.hasMajorUnits, unit_uri))
 
+# Add SHACL constraints
+shacl_graph = Graph()
+shacl_graph.parse("UWAbok_constraints.ttl", format="turtle")
+
+# Validate the data graph against the SHACL constraints
+conforms, results_graph, results_text = validate(g, shacl_graph=shacl_graph, data_graph_format="turtle", shacl_graph_format="turtle", inference="rdfs")
+
+# Print validation results
+print(results_text)
 # Serialize the RDF graph to a file
 g.serialize("uwaBOK.rdf")
