@@ -1,0 +1,163 @@
+{
+  "MJD-CMPSC": {
+    "code": "MJD-CMPSC",
+    "title": "Computer Science",
+    "school": "Physics, Mathematics and Computing",
+    "board_of_examiners": "02 - Information Technology",
+    "delivery_mode": "",
+    "description": "Computing software and systems are becoming increasingly integral to our lives, revolutionising the world in which we live, work and communicate. This major provides its students with the knowledge and skills required to participate in this revolution. Your studies develop your knowledge of theoretical, algorithmic, implementation and systems principles that underpin computer languages and networks. If you wish to play a role in developing new computing technologies or specialise in enterprise-level programming, systems, software engineering or research careers, then Computer Science is the major for you.",
+    "outcomes": [
+      " identify appropriate data structures and algorithms to solve computational problems",
+      " design, implement, verify, test, and document robust and secure computer programs",
+      " apply the knowledge of design and operation of core computer system components to the development of computer systems",
+      " explain ethical, social and security aspects and constraints of contemporary computer science practice",
+      " apply team-based software development processes",
+      " communicate software and systems requirements analysis, design, implementation, testing and documentation clearly in oral and written formats."
+    ],
+    "prerequisites": "Mathematics Methods ATAR or Mathematics Applications ATAR with a mathematics unit taken in the first year.\nStudents without ATAR Mathematics will take two first-year mathematics",
+    "courses": [
+      "BP004",
+      "BH005"
+    ],
+    "bridging": [
+      "MATH1721"
+    ],
+    "units": [
+      "CITS1003",
+      "CITS1401",
+      "CITS1402",
+      "CITS2002",
+      "CITS2005",
+      "CITS2200",
+      "CITS2211",
+      "CITS3001",
+      "CITS3002",
+      "CITS3200",
+      "CITS3403",
+      "CITS3003",
+      "CITS3005",
+      "CITS3007",
+      "CITS3402"
+    ]
+  },
+  "MJD-DATSC": {
+    "code": "MJD-DATSC",
+    "title": "Data Science",
+    "school": "Physics, Mathematics and Computing",
+    "board_of_examiners": "02 - Information Technology",
+    "delivery_mode": "",
+    "description": "Strong computing and data analysis skills are becoming necessary in an ever-increasing number of disciplines and workplace contexts. This major focuses on data and scientific computation including technologies for efficient and effective data collection, conversion, analysis, visualisation, interpretation, storage, search, synthesis and provision through the internet. Many professional organisations use computing resources extensively for information analysis, storage, communication and distribution, providing you with many diverse career options as a graduate. The Data Science major provides students with practical computing and information technology skills.",
+    "outcomes": [
+      " apply computational and statistical techniques to analyse diverse real-world datasets",
+      " construct data science analyses in incremental and integrated stages",
+      " explain ethical and social aspects and opportunities and constraints of contemporary data science practice.",
+      " demonstrate ability to work effectively as a team member and as a team leader",
+      " communicate data analytics processes and results clearly in oral and written formats in professional and lay terms",
+      " assess critically alternative solutions for the same data science project."
+    ],
+    "prerequisites": "Mathematics Methods ATAR OR Mathematics Applications ATAR with a mathematics unit taken in the first year.\nStudents without ATAR Mathematics will take two first-year mathematics",
+    "courses": [
+      "BP004",
+      "BH005"
+    ],
+    "bridging": [
+      "MATH1721"
+    ],
+    "units": [
+      "CITS1401",
+      "CITS1402",
+      "PHIL1001",
+      "STAT1400",
+      "CITS2402",
+      "STAT2401",
+      "STAT2402",
+      "CITS3200",
+      "CITS3401",
+      "CITS3403",
+      "STAT3064",
+      "STAT3405"
+    ]
+  },
+  "MJD-ARIDM": {
+    "code": "MJD-ARIDM",
+    "title": "Artificial Intelligence",
+    "school": "Physics, Mathematics and Computing",
+    "board_of_examiners": "02 - Information Technology",
+    "delivery_mode": "",
+    "description": "The Bachelor of Advanced Computer Science (Artificial Intelligence) will equip you with the skills and knowledge to understand, evaluate, design and implement artificial intelligence systems. You'll learn tools and techniques to develop and use artificial intelligence systems make a significant contribution to communities, the success of organisations and the global economy. You will study the philosophical, legal and ethical context for AI in real-world applications.  Working alongside inspiring researchers and industry, you'll get hands-on practice in in a variety of contemporary artificial intelligence techniques, from knowledge representation to deep learning, developing in-demand skills and leadership qualities for an exciting career in AI.",
+    "outcomes": [
+      " acquire the skills and knowledge to understand, evaluate, design and implement artificial intelligence systems",
+      " apply contemporary artificial intelligence techniques, from knowledge representation, to deep learning",
+      " discuss the ethical, social and philosophical context for AI technologies as they apply to real world settings",
+      " work effectively as a team member and a leader for practical AI projects",
+      " extend knowledge in artificial intelligence through research, experimentation and analysis."
+    ],
+    "prerequisites": "ATAR Mathematics ",
+    "courses": [
+      "BH008"
+    ],
+    "bridging": [],
+    "units": [
+      "CITS1003",
+      "CITS1401",
+      "CITS1402",
+      "CITS2002",
+      "PHIL1001",
+      "CITS2005",
+      "CITS2200",
+      "CITS2211",
+      "CITS3001",
+      "CITS3002",
+      "PHIL2008",
+      "CITS3005",
+      "CITS3007",
+      "CITS3200",
+      "CITS3403",
+      "CITS4402",
+      "CITS4403",
+      "PHIL3003",
+      "SCIE2100",
+      "CITS4010",
+      "CITS4011",
+      "CITS4012",
+      "CITS4404",
+      "CITS5017",
+      "CITS5508"
+    ]
+  },
+  "MJD-CYBER": {
+    "code": "MJD-CYBER",
+    "title": "Cybersecurity",
+    "school": "Physics, Mathematics and Computing",
+    "board_of_examiners": "02 - Information Technology",
+    "delivery_mode": "",
+    "description": "Almost every ICT career path encompasses some aspect of cybersecurity. The major in cybersecurity will prepare you for a range of specialist cybersecurity roles using technology, people, information, and processes to enable assured operations in the context of adversaries. With industry integrated learning, you'll gain the practical skills and knowledge to lead the creation, implementation and management of secure computer systems across a range of exciting career paths, protecting people and their data from cyber-attacks.",
+    "outcomes": [
+      " use mathematical, technical and business tools to secure information systems",
+      " design prevention and mitigation strategies to address cyber security challenges",
+      " design secure computer systems",
+      " work effectively as a team member and as a team leader in cybersecurity projects",
+      " communicate cybersecurity concepts and techniques and results clearly in oral and written formats."
+    ],
+    "prerequisites": "Mathematics Methods ATAR or Mathematics Applications ATAR with a mathematics unit taken in the first year.\nStudents without ATAR Mathematics will take two first-year mathematics",
+    "courses": [
+      "BP004",
+      "BH005"
+    ],
+    "bridging": [
+      "MATH1721"
+    ],
+    "units": [
+      "CITS1003",
+      "CITS1401",
+      "PHIL1001",
+      "CITS2002",
+      "CITS2003",
+      "CITS3002",
+      "CITS3006",
+      "CITS3007",
+      "CITS3200",
+      "CITS3403"
+    ]
+  }
+}

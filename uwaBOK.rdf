@@ -3,127 +3,144 @@
 @prefix uwabok: <http://example.org/uwabok#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-uwabok:Assessment a rdfs:Class ;
-    rdfs:subClassOf rdfs:Resource .
-
 uwabok:Major a rdfs:Class ;
-    rdfs:subClassOf rdfs:Resource .
-
-uwabok:MajorPrereq a rdfs:Class ;
-    rdfs:subClassOf uwabok:Prerequisite .
-
-uwabok:Prerequisite a rdfs:Class ;
     rdfs:subClassOf rdfs:Resource .
 
 uwabok:Unit a rdfs:Class ;
     rdfs:subClassOf rdfs:Resource .
 
-uwabok:UnitPrereq a rdfs:Class ;
-    rdfs:subClassOf uwabok:Prerequisite .
+uwabok:MJD-ARIDM a uwabok:Major ;
+    uwabok:hasMajorCode "MJD-ARIDM" ;
+    uwabok:hasMajorCourses "BH008" ;
+    uwabok:hasMajorDescription "The Bachelor of Advanced Computer Science (Artificial Intelligence) will equip you with the skills and knowledge to understand, evaluate, design and implement artificial intelligence systems. You'll learn tools and techniques to develop and use artificial intelligence systems make a significant contribution to communities, the success of organisations and the global economy. You will study the philosophical, legal and ethical context for AI in real-world applications.  Working alongside inspiring researchers and industry, you'll get hands-on practice in in a variety of contemporary artificial intelligence techniques, from knowledge representation to deep learning, developing in-demand skills and leadership qualities for an exciting career in AI." ;
+    uwabok:hasMajorOutcomes " acquire the skills and knowledge to understand, evaluate, design and implement artificial intelligence systems",
+        " apply contemporary artificial intelligence techniques, from knowledge representation, to deep learning",
+        " discuss the ethical, social and philosophical context for AI technologies as they apply to real world settings",
+        " extend knowledge in artificial intelligence through research, experimentation and analysis.",
+        " work effectively as a team member and a leader for practical AI projects" ;
+    uwabok:hasMajorPrereqText "ATAR Mathematics " ;
+    uwabok:hasMajorTitle "Artificial Intelligence" ;
+    uwabok:hasMajorUnits uwabok:CITS1003,
+        uwabok:CITS1401,
+        uwabok:CITS1402,
+        uwabok:CITS2002,
+        uwabok:CITS2005,
+        uwabok:CITS2200,
+        uwabok:CITS2211,
+        uwabok:CITS3001,
+        uwabok:CITS3002,
+        uwabok:CITS3005,
+        uwabok:CITS3007,
+        uwabok:CITS3200,
+        uwabok:CITS3403,
+        uwabok:CITS4010,
+        uwabok:CITS4011,
+        uwabok:CITS4012,
+        uwabok:CITS4402,
+        uwabok:CITS4403,
+        uwabok:CITS4404,
+        uwabok:CITS5017,
+        uwabok:CITS5508,
+        uwabok:PHIL1001,
+        uwabok:PHIL2008,
+        uwabok:PHIL3003,
+        uwabok:SCIE2100 .
 
-uwabok:CITS2002 a uwabok:Unit ;
-    uwabok:hasAssessments " final examination",
-        " mid-semester test",
-        " programming" ;
-    uwabok:hasContactHours 5 ;
-    uwabok:hasCreditPoints 6 ;
-    uwabok:hasDescription "Understanding the relationship between a programming language and the contemporary operating systems on which it executes is central to developing many skills in Computer Science. This unit introduces the standard C programming language, on which many other programming languages and systems are based, through a study of core operating system services including input and output, memory management and file systems. The C language is introduced through discussions on basic topics like data types, variables, expressions, control structures, scoping rules, functions and parameter passing. More advanced topics like C's run-time environment, system calls, dynamic memory allocation, pointers and recursion are presented in the context of operating system services related to process execution, memory management and file systems. The importance of process scheduling, memory management and interprocess communication in modern operating systems is discussed in the context of operating system support for multiprogramming. Laboratory and practical class work place a strong focus on the practical application of fundamental programming concepts, with examples designed to compare and contrast many key features of contemporary operating systems." ;
-    uwabok:hasLevel 2 ;
-    uwabok:hasOutcomes " apply the most appropriate techniques to successfully develop robust systems programs in the C language",
-        " decide when to choose the C programming language and its standard library for their systems programming requirements",
-        " demonstrate an understanding of the relationship between contemporary operating systems, programming languages and systems-level application programming interfaces.",
-        " explain the relationship and interactions between an operating system's critical components and their affect on performance",
-        " explain the role of an operating system in the wider computing context",
-        " identify and appreciate the fundamentals of the imperative programming paradigm, using the standard C programming language as an example" ;
-    uwabok:hasTitle "Systems Programming" ;
-    uwabok:hasUnitCode "CITS2002" ;
-    uwabok:hasUnitPrereqText "completion of 6 points of programming-based units" .
+uwabok:MJD-CMPSC a uwabok:Major ;
+    uwabok:hasBridgingCourses "MATH1721" ;
+    uwabok:hasMajorCode "MJD-CMPSC" ;
+    uwabok:hasMajorCourses "BH005",
+        "BP004" ;
+    uwabok:hasMajorDescription "Computing software and systems are becoming increasingly integral to our lives, revolutionising the world in which we live, work and communicate. This major provides its students with the knowledge and skills required to participate in this revolution. Your studies develop your knowledge of theoretical, algorithmic, implementation and systems principles that underpin computer languages and networks. If you wish to play a role in developing new computing technologies or specialise in enterprise-level programming, systems, software engineering or research careers, then Computer Science is the major for you." ;
+    uwabok:hasMajorOutcomes " apply team-based software development processes",
+        " apply the knowledge of design and operation of core computer system components to the development of computer systems",
+        " communicate software and systems requirements analysis, design, implementation, testing and documentation clearly in oral and written formats.",
+        " design, implement, verify, test, and document robust and secure computer programs",
+        " explain ethical, social and security aspects and constraints of contemporary computer science practice",
+        " identify appropriate data structures and algorithms to solve computational problems" ;
+    uwabok:hasMajorPrereqText """Mathematics Methods ATAR or Mathematics Applications ATAR with a mathematics unit taken in the first year.
+Students without ATAR Mathematics will take two first-year mathematics""" ;
+    uwabok:hasMajorTitle "Computer Science" ;
+    uwabok:hasMajorUnits uwabok:CITS1003,
+        uwabok:CITS1401,
+        uwabok:CITS1402,
+        uwabok:CITS2002,
+        uwabok:CITS2005,
+        uwabok:CITS2200,
+        uwabok:CITS2211,
+        uwabok:CITS3001,
+        uwabok:CITS3002,
+        uwabok:CITS3003,
+        uwabok:CITS3005,
+        uwabok:CITS3007,
+        uwabok:CITS3200,
+        uwabok:CITS3402,
+        uwabok:CITS3403 .
 
-uwabok:CITS3005 a uwabok:Unit ;
-    uwabok:hasAssessments " final examination",
-        " planning project",
-        " workshops" ;
-    uwabok:hasContactHours 4 ;
-    uwabok:hasCreditPoints 6 ;
-    uwabok:hasDescription "Knowledge Representation will cover tools and methodologies for the formal representation of knowledge in a machine readable format, and automated reasoning technologies. These technologies are important for capturing domain specific details and supporting and automating decision making processes. The course will cover: logical foundations of artificial intelligence, including first order, probabilistic and fuzzy logics; formal representation of knowledge domains, including description logics, ontologies and graphical models; reasoning techniques including logic programming and theorem proving; and applications to planning domains." ;
-    uwabok:hasLevel 3 ;
-    uwabok:hasOutcomes " describe the theoretical foundation of logic programming.",
-        " design and implement planning systems for a given domain..",
-        " design, verify and implement logic programs.",
-        " formulate complex concepts, rules and arguments in an appropriate logical language.",
-        " select suitable tools and formalisms to capture domain specific knowledge in a machine readable format." ;
-    uwabok:hasPrerequisites uwabok:CITS2200,
-        uwabok:CITS2211 ;
-    uwabok:hasTitle "Knowledge Representation" ;
-    uwabok:hasUnitCode "CITS3005" ;
-    uwabok:hasUnitPrereqText "CITS2200 Data Structures and Algorithmsand CITS2211 Discrete Structures" .
+uwabok:MJD-CYBER a uwabok:Major ;
+    uwabok:hasBridgingCourses "MATH1721" ;
+    uwabok:hasMajorCode "MJD-CYBER" ;
+    uwabok:hasMajorCourses "BH005",
+        "BP004" ;
+    uwabok:hasMajorDescription "Almost every ICT career path encompasses some aspect of cybersecurity. The major in cybersecurity will prepare you for a range of specialist cybersecurity roles using technology, people, information, and processes to enable assured operations in the context of adversaries. With industry integrated learning, you'll gain the practical skills and knowledge to lead the creation, implementation and management of secure computer systems across a range of exciting career paths, protecting people and their data from cyber-attacks." ;
+    uwabok:hasMajorOutcomes " communicate cybersecurity concepts and techniques and results clearly in oral and written formats.",
+        " design prevention and mitigation strategies to address cyber security challenges",
+        " design secure computer systems",
+        " use mathematical, technical and business tools to secure information systems",
+        " work effectively as a team member and as a team leader in cybersecurity projects" ;
+    uwabok:hasMajorPrereqText """Mathematics Methods ATAR or Mathematics Applications ATAR with a mathematics unit taken in the first year.
+Students without ATAR Mathematics will take two first-year mathematics""" ;
+    uwabok:hasMajorTitle "Cybersecurity" ;
+    uwabok:hasMajorUnits uwabok:CITS1003,
+        uwabok:CITS1401,
+        uwabok:CITS2002,
+        uwabok:CITS2003,
+        uwabok:CITS3002,
+        uwabok:CITS3006,
+        uwabok:CITS3007,
+        uwabok:CITS3200,
+        uwabok:CITS3403,
+        uwabok:PHIL1001 .
 
-uwabok:CITS3007 a uwabok:Unit ;
-    uwabok:hasAssessments " exam",
-        " project",
-        " tests" ;
-    uwabok:hasContactHours 4 ;
-    uwabok:hasCreditPoints 6 ;
-    uwabok:hasDescription "This unit covers different types of security vulnerabilities of computer systems and how to prevent and mitigate the effects of them.  Topics include: (1) memory and Arithmetic Errors; (2) validated input and inter-process communication; (3) race conditions and file operations; (4) cryptographic practises; and (5) development practices." ;
-    uwabok:hasLevel 3 ;
-    uwabok:hasOutcomes " apply industry standard secure programming practices",
-        " demonstrate an understanding of the basic execution model of computer programs and how programs represent and access their resources",
-        " develop a systems approach to the evaluation of a software system to identify security vulnerabilities.",
-        " explain a range of common software vulnerabilities, the threats that they pose to correct execution, and steps to mitigate them",
-        " validate a program's input data and external connections" ;
-    uwabok:hasTitle "Secure Coding" ;
-    uwabok:hasUnitCode "CITS3007" ;
-    uwabok:hasUnitPrereqText "completion of 12 points of programming-based units" .
-
-uwabok:CITS4402 a uwabok:Unit ;
-    uwabok:hasAssessments " final exam",
-        " laboratory solutions ",
-        " research project" ;
-    uwabok:hasContactHours 0 ;
-    uwabok:hasCreditPoints 6 ;
-    uwabok:hasDescription "Computer vision is the science of automatically computing information and making decisions from an observed image, image set or an image sequence. It combines concepts from 'image processing' (in the spatial and frequency domains) and 'pattern recognition'. Computer vision has a wide number of potential applications, including satellite imaging, control and measurement, industrial inspection, surveillance (e.g. face recognition) and medical applications. This unit covers topics such as binary image analysis, greyscale image manipulation, linear and nonlinear filtering, feature extraction, image enhancement, image segmentation and recognition. It also covers camera calibration and projective geometry and how three-dimensional information can be reconstructed from single images, stereo pairs of images and motion sequences. In the future, it is anticipated that computer vision systems will become prevailing, and that vision technology will be more applied across a broad range of business and consumer products. This will result in a strong industry demand for computer vision engineers—for people who understand vision technology and know how to apply it in real-world problems." ;
-    uwabok:hasLevel 4 ;
-    uwabok:hasOutcomes " conduct independent research on a chosen research topic, write a small research report, and give an oral presentation",
-        " critique various methodologies for solving problems in computer vision and image processing.",
-        " demonstrate logical thinking and problem-solving skills",
-        " describe the theories and principles in computer vision",
-        " explain computer vision problems in writing",
-        " explain the technical theory behind formation of images",
-        " process images in both the spatial and frequency domains",
-        " write MATLAB code to solve computer vision problems" ;
-    uwabok:hasPrerequisites uwabok:CITS1401,
-        uwabok:CITS2401,
-        uwabok:CITX1401,
-        uwabok:MATX1012 ;
-    uwabok:hasTitle "Computer Vision" ;
-    uwabok:hasUnitCode "CITS4402" ;
-    uwabok:hasUnitPrereqText " Enrolment in HON-CMSSE Computer Science and Software Engineeringor 62530 Master of Data Scienceor62550 Master of Professional Engineering and SP-EBIOM Biomedical Engineering specialisationor SP-EELEC Electrical and Electronic Engineering specialisationor SP-ESOFT Software Engineering specialisationor53560 Master of Physics and SP-MEDPH Medical PhysicsorBH008 Bachelor of Advanced Computer Science [Honours] and MJD-ARIDM Artificial IntelligenceorBachelor of Engineering (Honours) or an associated Combined Degree and  Successful completion of96 points and ( CITS2401 Computer Analysis and Visualisationor CITS1401 Computational Thinking with Pythonor CITX1401 Computational Thinking with Python  and  MATH1012 Mathematical Theory and Methodsor MATX1012 Mathematical Theory and Methods)" .
-
-uwabok:CITS4403 a uwabok:Unit ;
-    uwabok:hasAssessments " notebook",
-        " project",
-        " two in-class tests " ;
-    uwabok:hasContactHours 0 ;
-    uwabok:hasCreditPoints 6 ;
-    uwabok:hasDescription "This unit explores current research topics in computational modelling. Students develop skills to identify problems, formulate solutions and conduct further research in open questions in this domain." ;
-    uwabok:hasLevel 4 ;
-    uwabok:hasOutcomes " analyse and discuss current open research topics in the field of computational modelling",
-        " communicate effectively to present computational models to address a given research hypothesis and qualify the limitations of these models",
-        " design, apply and analyse relevant technologies to solve problems in the field of computational modelling.",
-        " explain the concepts and technologies used in the field of computational modelling" ;
-    uwabok:hasTitle "Computational Modelling" ;
-    uwabok:hasUnitCode "CITS4403" ;
-    uwabok:hasUnitPrereqText " Enrolment in  in theHON-CMSSE Computer Science and Software Engineering [Honours]or the 62510 Master of Information Technologyor the 62530 Master of Data Scienceorthe 62550 Master of Professional Engineering and the SP-ESOFT Software Engineering specialisationorthe BH008 Bachelor of Advanced Computer Science [Honours] and MJD-ICYDM International Cybersecurity majoror the MJD-ARIDM Artificial Intelligence majoror73660 Master of Medical Physics" .
+uwabok:MJD-DATSC a uwabok:Major ;
+    uwabok:hasBridgingCourses "MATH1721" ;
+    uwabok:hasMajorCode "MJD-DATSC" ;
+    uwabok:hasMajorCourses "BH005",
+        "BP004" ;
+    uwabok:hasMajorDescription "Strong computing and data analysis skills are becoming necessary in an ever-increasing number of disciplines and workplace contexts. This major focuses on data and scientific computation including technologies for efficient and effective data collection, conversion, analysis, visualisation, interpretation, storage, search, synthesis and provision through the internet. Many professional organisations use computing resources extensively for information analysis, storage, communication and distribution, providing you with many diverse career options as a graduate. The Data Science major provides students with practical computing and information technology skills." ;
+    uwabok:hasMajorOutcomes " apply computational and statistical techniques to analyse diverse real-world datasets",
+        " assess critically alternative solutions for the same data science project.",
+        " communicate data analytics processes and results clearly in oral and written formats in professional and lay terms",
+        " construct data science analyses in incremental and integrated stages",
+        " demonstrate ability to work effectively as a team member and as a team leader",
+        " explain ethical and social aspects and opportunities and constraints of contemporary data science practice." ;
+    uwabok:hasMajorPrereqText """Mathematics Methods ATAR OR Mathematics Applications ATAR with a mathematics unit taken in the first year.
+Students without ATAR Mathematics will take two first-year mathematics""" ;
+    uwabok:hasMajorTitle "Data Science" ;
+    uwabok:hasMajorUnits uwabok:CITS1401,
+        uwabok:CITS1402,
+        uwabok:CITS2402,
+        uwabok:CITS3200,
+        uwabok:CITS3401,
+        uwabok:CITS3403,
+        uwabok:PHIL1001,
+        uwabok:STAT1400,
+        uwabok:STAT2401,
+        uwabok:STAT2402,
+        uwabok:STAT3064,
+        uwabok:STAT3405 .
 
 uwabok:hasAssessments a rdf:Property ;
     rdfs:domain uwabok:Unit ;
-    rdfs:range uwabok:Assessment .
+    rdfs:range xsd:string .
 
 uwabok:hasBridgingCourses a rdf:Property ;
     rdfs:domain uwabok:Major ;
     rdfs:range xsd:string .
 
-uwabok:hasContactHours a rdf:Property .
+uwabok:hasContactHours a rdf:Property ;
+    rdfs:domain uwabok:Unit ;
+    rdfs:range xsd:integer .
 
 uwabok:hasCreditPoints a rdf:Property ;
     rdfs:domain uwabok:Unit ;
@@ -132,8 +149,6 @@ uwabok:hasCreditPoints a rdf:Property ;
 uwabok:hasDescription a rdf:Property ;
     rdfs:domain uwabok:Unit ;
     rdfs:range xsd:string .
-
-uwabok:hasExamAssessment a rdf:Property .
 
 uwabok:hasLevel a rdf:Property ;
     rdfs:domain uwabok:Unit ;
@@ -156,7 +171,7 @@ uwabok:hasMajorOutcomes a rdf:Property ;
     rdfs:range xsd:string .
 
 uwabok:hasMajorPrereqText a rdf:Property ;
-    rdfs:domain uwabok:MajorPrereq ;
+    rdfs:domain uwabok:Major ;
     rdfs:range xsd:string .
 
 uwabok:hasMajorTitle a rdf:Property ;
@@ -167,23 +182,9 @@ uwabok:hasMajorUnits a rdf:Property ;
     rdfs:domain uwabok:Major ;
     rdfs:range uwabok:Unit .
 
-uwabok:hasOtherAssessments a rdf:Property .
-
 uwabok:hasOutcomes a rdf:Property ;
     rdfs:domain uwabok:Unit ;
     rdfs:range xsd:string .
-
-uwabok:hasPrerequisites a rdf:Property ;
-    rdfs:domain uwabok:Unit ;
-    rdfs:range uwabok:Prerequisite .
-
-uwabok:hasPresentationAssessment a rdf:Property .
-
-uwabok:hasProjectAssessment a rdf:Property ;
-    rdfs:domain uwabok:Assessment ;
-    rdfs:range xsd:string .
-
-uwabok:hasReportAssessment a rdf:Property .
 
 uwabok:hasTitle a rdf:Property ;
     rdfs:domain uwabok:Unit ;
@@ -194,12 +195,176 @@ uwabok:hasUnitCode a rdf:Property ;
     rdfs:range xsd:string .
 
 uwabok:hasUnitPrereqCNF a rdf:Property ;
-    rdfs:domain uwabok:UnitPrereq ;
+    rdfs:domain uwabok:Unit ;
     rdfs:range uwabok:Unit .
 
 uwabok:hasUnitPrereqText a rdf:Property ;
-    rdfs:domain uwabok:UnitPrereq ;
+    rdfs:domain uwabok:Unit ;
     rdfs:range xsd:string .
+
+uwabok:CITS2003 a uwabok:Unit .
+
+uwabok:CITS2401 a uwabok:Unit .
+
+uwabok:CITS2402 a uwabok:Unit .
+
+uwabok:CITS3003 a uwabok:Unit .
+
+uwabok:CITS3006 a uwabok:Unit .
+
+uwabok:CITS3401 a uwabok:Unit .
+
+uwabok:CITS3402 a uwabok:Unit .
+
+uwabok:CITS4010 a uwabok:Unit .
+
+uwabok:CITS4011 a uwabok:Unit .
+
+uwabok:CITS4012 a uwabok:Unit .
+
+uwabok:CITS4402 a uwabok:Unit ;
+    uwabok:hasAssessments " final exam",
+        " laboratory solutions ",
+        " research project" ;
+    uwabok:hasContactHours 0 ;
+    uwabok:hasCreditPoints 6 ;
+    uwabok:hasDescription "Computer vision is the science of automatically computing information and making decisions from an observed image, image set or an image sequence. It combines concepts from 'image processing' (in the spatial and frequency domains) and 'pattern recognition'. Computer vision has a wide number of potential applications, including satellite imaging, control and measurement, industrial inspection, surveillance (e.g. face recognition) and medical applications. This unit covers topics such as binary image analysis, greyscale image manipulation, linear and nonlinear filtering, feature extraction, image enhancement, image segmentation and recognition. It also covers camera calibration and projective geometry and how three-dimensional information can be reconstructed from single images, stereo pairs of images and motion sequences. In the future, it is anticipated that computer vision systems will become prevailing, and that vision technology will be more applied across a broad range of business and consumer products. This will result in a strong industry demand for computer vision engineers—for people who understand vision technology and know how to apply it in real-world problems." ;
+    uwabok:hasLevel 4 ;
+    uwabok:hasOutcomes " conduct independent research on a chosen research topic, write a small research report, and give an oral presentation",
+        " critique various methodologies for solving problems in computer vision and image processing.",
+        " demonstrate logical thinking and problem-solving skills",
+        " describe the theories and principles in computer vision",
+        " explain computer vision problems in writing",
+        " explain the technical theory behind formation of images",
+        " process images in both the spatial and frequency domains",
+        " write MATLAB code to solve computer vision problems" ;
+    uwabok:hasTitle "Computer Vision" ;
+    uwabok:hasUnitCode "CITS4402" ;
+    uwabok:hasUnitPrereqCNF uwabok:CITS1401,
+        uwabok:CITS2401,
+        uwabok:CITX1401,
+        uwabok:MATX1012 ;
+    uwabok:hasUnitPrereqText " Enrolment in HON-CMSSE Computer Science and Software Engineeringor 62530 Master of Data Scienceor62550 Master of Professional Engineering and SP-EBIOM Biomedical Engineering specialisationor SP-EELEC Electrical and Electronic Engineering specialisationor SP-ESOFT Software Engineering specialisationor53560 Master of Physics and SP-MEDPH Medical PhysicsorBH008 Bachelor of Advanced Computer Science [Honours] and MJD-ARIDM Artificial IntelligenceorBachelor of Engineering (Honours) or an associated Combined Degree and  Successful completion of96 points and ( CITS2401 Computer Analysis and Visualisationor CITS1401 Computational Thinking with Pythonor CITX1401 Computational Thinking with Python  and  MATH1012 Mathematical Theory and Methodsor MATX1012 Mathematical Theory and Methods)" .
+
+uwabok:CITS4403 a uwabok:Unit ;
+    uwabok:hasAssessments " notebook",
+        " project",
+        " two in-class tests " ;
+    uwabok:hasContactHours 0 ;
+    uwabok:hasCreditPoints 6 ;
+    uwabok:hasDescription "This unit explores current research topics in computational modelling. Students develop skills to identify problems, formulate solutions and conduct further research in open questions in this domain." ;
+    uwabok:hasLevel 4 ;
+    uwabok:hasOutcomes " analyse and discuss current open research topics in the field of computational modelling",
+        " communicate effectively to present computational models to address a given research hypothesis and qualify the limitations of these models",
+        " design, apply and analyse relevant technologies to solve problems in the field of computational modelling.",
+        " explain the concepts and technologies used in the field of computational modelling" ;
+    uwabok:hasTitle "Computational Modelling" ;
+    uwabok:hasUnitCode "CITS4403" ;
+    uwabok:hasUnitPrereqText " Enrolment in  in theHON-CMSSE Computer Science and Software Engineering [Honours]or the 62510 Master of Information Technologyor the 62530 Master of Data Scienceorthe 62550 Master of Professional Engineering and the SP-ESOFT Software Engineering specialisationorthe BH008 Bachelor of Advanced Computer Science [Honours] and MJD-ICYDM International Cybersecurity majoror the MJD-ARIDM Artificial Intelligence majoror73660 Master of Medical Physics" .
+
+uwabok:CITS4404 a uwabok:Unit .
+
+uwabok:CITS5017 a uwabok:Unit .
+
+uwabok:CITS5508 a uwabok:Unit .
+
+uwabok:CITX1401 a uwabok:Unit .
+
+uwabok:MATH1720 a uwabok:Unit .
+
+uwabok:MATX1012 a uwabok:Unit .
+
+uwabok:MATX1720 a uwabok:Unit .
+
+uwabok:PHIL2008 a uwabok:Unit .
+
+uwabok:PHIL3003 a uwabok:Unit .
+
+uwabok:SCIE2100 a uwabok:Unit .
+
+uwabok:STAT1400 a uwabok:Unit .
+
+uwabok:STAT2401 a uwabok:Unit .
+
+uwabok:STAT2402 a uwabok:Unit .
+
+uwabok:STAT3064 a uwabok:Unit .
+
+uwabok:STAT3405 a uwabok:Unit .
+
+uwabok:CITS2005 a uwabok:Unit .
+
+uwabok:CITS3001 a uwabok:Unit .
+
+uwabok:CITS3005 a uwabok:Unit ;
+    uwabok:hasAssessments " final examination",
+        " planning project",
+        " workshops" ;
+    uwabok:hasContactHours 4 ;
+    uwabok:hasCreditPoints 6 ;
+    uwabok:hasDescription "Knowledge Representation will cover tools and methodologies for the formal representation of knowledge in a machine readable format, and automated reasoning technologies. These technologies are important for capturing domain specific details and supporting and automating decision making processes. The course will cover: logical foundations of artificial intelligence, including first order, probabilistic and fuzzy logics; formal representation of knowledge domains, including description logics, ontologies and graphical models; reasoning techniques including logic programming and theorem proving; and applications to planning domains." ;
+    uwabok:hasLevel 3 ;
+    uwabok:hasOutcomes " describe the theoretical foundation of logic programming.",
+        " design and implement planning systems for a given domain..",
+        " design, verify and implement logic programs.",
+        " formulate complex concepts, rules and arguments in an appropriate logical language.",
+        " select suitable tools and formalisms to capture domain specific knowledge in a machine readable format." ;
+    uwabok:hasTitle "Knowledge Representation" ;
+    uwabok:hasUnitCode "CITS3005" ;
+    uwabok:hasUnitPrereqCNF uwabok:CITS2200,
+        uwabok:CITS2211 ;
+    uwabok:hasUnitPrereqText "CITS2200 Data Structures and Algorithmsand CITS2211 Discrete Structures" .
+
+uwabok:CITS1003 a uwabok:Unit .
+
+uwabok:CITS1402 a uwabok:Unit .
+
+uwabok:CITS2002 a uwabok:Unit ;
+    uwabok:hasAssessments " final examination",
+        " mid-semester test",
+        " programming" ;
+    uwabok:hasContactHours 5 ;
+    uwabok:hasCreditPoints 6 ;
+    uwabok:hasDescription "Understanding the relationship between a programming language and the contemporary operating systems on which it executes is central to developing many skills in Computer Science. This unit introduces the standard C programming language, on which many other programming languages and systems are based, through a study of core operating system services including input and output, memory management and file systems. The C language is introduced through discussions on basic topics like data types, variables, expressions, control structures, scoping rules, functions and parameter passing. More advanced topics like C's run-time environment, system calls, dynamic memory allocation, pointers and recursion are presented in the context of operating system services related to process execution, memory management and file systems. The importance of process scheduling, memory management and interprocess communication in modern operating systems is discussed in the context of operating system support for multiprogramming. Laboratory and practical class work place a strong focus on the practical application of fundamental programming concepts, with examples designed to compare and contrast many key features of contemporary operating systems." ;
+    uwabok:hasLevel 2 ;
+    uwabok:hasOutcomes " apply the most appropriate techniques to successfully develop robust systems programs in the C language",
+        " decide when to choose the C programming language and its standard library for their systems programming requirements",
+        " demonstrate an understanding of the relationship between contemporary operating systems, programming languages and systems-level application programming interfaces.",
+        " explain the relationship and interactions between an operating system's critical components and their affect on performance",
+        " explain the role of an operating system in the wider computing context",
+        " identify and appreciate the fundamentals of the imperative programming paradigm, using the standard C programming language as an example" ;
+    uwabok:hasTitle "Systems Programming" ;
+    uwabok:hasUnitCode "CITS2002" ;
+    uwabok:hasUnitPrereqText "completion of 6 points of programming-based units" .
+
+uwabok:CITS2200 a uwabok:Unit .
+
+uwabok:CITS2211 a uwabok:Unit .
+
+uwabok:CITS3002 a uwabok:Unit .
+
+uwabok:CITS3007 a uwabok:Unit ;
+    uwabok:hasAssessments " exam",
+        " project",
+        " tests" ;
+    uwabok:hasContactHours 4 ;
+    uwabok:hasCreditPoints 6 ;
+    uwabok:hasDescription "This unit covers different types of security vulnerabilities of computer systems and how to prevent and mitigate the effects of them.  Topics include: (1) memory and Arithmetic Errors; (2) validated input and inter-process communication; (3) race conditions and file operations; (4) cryptographic practises; and (5) development practices." ;
+    uwabok:hasLevel 3 ;
+    uwabok:hasOutcomes " apply industry standard secure programming practices",
+        " demonstrate an understanding of the basic execution model of computer programs and how programs represent and access their resources",
+        " develop a systems approach to the evaluation of a software system to identify security vulnerabilities.",
+        " explain a range of common software vulnerabilities, the threats that they pose to correct execution, and steps to mitigate them",
+        " validate a program's input data and external connections" ;
+    uwabok:hasTitle "Secure Coding" ;
+    uwabok:hasUnitCode "CITS3007" ;
+    uwabok:hasUnitPrereqText "completion of 12 points of programming-based units" .
+
+uwabok:PHIL1001 a uwabok:Unit .
+
+uwabok:CITS3200 a uwabok:Unit .
+
+uwabok:CITS3403 a uwabok:Unit .
 
 uwabok:CITS1401 a uwabok:Unit ;
     uwabok:hasAssessments " final examination",
@@ -213,23 +378,9 @@ uwabok:CITS1401 a uwabok:Unit ;
         " create algorithms using computational thinking to solve a range of problems",
         " demonstrate the process of computational problem solving",
         " write programs using Python 3 to implement algorithms" ;
-    uwabok:hasPrerequisites uwabok:MATH1720,
-        uwabok:MATX1720 ;
     uwabok:hasTitle "Computational Thinking with Python" ;
     uwabok:hasUnitCode "CITS1401" ;
+    uwabok:hasUnitPrereqCNF uwabok:MATH1720,
+        uwabok:MATX1720 ;
     uwabok:hasUnitPrereqText "Mathematics Applications ATARor MATH1720 Mathematics Fundamentalsor MATX1720 Mathematics Fundamentals or equivalentor  Enrolment in62510 Master of Information Technologyor 62530 Master of Data Science " .
-
-uwabok:CITS2200 a uwabok:Unit .
-
-uwabok:CITS2211 a uwabok:Unit .
-
-uwabok:CITS2401 a uwabok:Unit .
-
-uwabok:CITX1401 a uwabok:Unit .
-
-uwabok:MATH1720 a uwabok:Unit .
-
-uwabok:MATX1012 a uwabok:Unit .
-
-uwabok:MATX1720 a uwabok:Unit .
 

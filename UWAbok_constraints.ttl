@@ -1,0 +1,39 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix uwabok: <http://example.org/uwabok#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+# SHACL shape for units with prerequisites
+uwabok:UnitShape
+    a sh:NodeShape ;
+    sh:targetClass uwabok:Unit ;
+    sh:property [
+        sh:path uwabok:hasPrerequisites ;
+        sh:nodeKind sh:IRI ;
+        sh:property [
+            sh:path uwabok:hasLevel ;
+            sh:lessThan uwabok:hasLevel ;
+            sh:message "Every prerequisite should have a level less than the unit's level." ;
+        ] ;
+    ] .
+
+# SHACL shape to prevent units from being their own prerequisites
+uwabok:NoSelfPrerequisiteShape
+    a sh:NodeShape ;
+    sh:targetClass uwabok:Unit ;
+    sh:property [
+        sh:path uwabok:hasPrerequisites ;
+        sh:hasValue uwabok:Unit ;
+        sh:message "A unit should not be its own prerequisite." ;
+    ] .
+
+# SHACL shape to check contact hours for majors
+uwabok:ContactHoursShape
+    a sh:NodeShape ;
+    sh:targetClass uwabok:Major ;
+    sh:property [
+        sh:path uwabok:hasContactHours ;
+        sh:maxExclusive 40 ;
+        sh:message "A major should not require more than 40 contact hours per week." ;
+    ] .
